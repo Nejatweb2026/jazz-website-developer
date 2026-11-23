@@ -108,7 +108,38 @@ footer {
     font-size: 32px;
   }
 }
-</style>
+/* JAZZ CSS3 Enhancement */
+.card {
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px #0063ff;
+}
+
+button {
+    background: #0063ff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #008cff;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 25px 12px;
+    }
+}</style>
 </head>
 
 <body>
@@ -165,7 +196,24 @@ footer {
   </div>
 </section>
 
-<footer>
+<footer><section id="security">
+    <h2>Cybersecurity</h2>
+
+    <div class="card">
+        <h3>Web Security</h3>
+        <p>Learn how to protect websites.</p>
+    </div>
+
+    <div class="card">
+        <h3>Ethical Hacking</h3>
+        <p>Learn ethical cybersecurity basics.</p>
+    </div>
+
+    <div class="card">
+        <h3>Online Safety</h3>
+        <p>Stay safe and secure online.</p>
+    </div>
+</section>
   <p>Created by JAZZ | 2026</p>
   <p>Learn. Create. Develop.</p>
 </footer>
