@@ -1,214 +1,91 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#020b24">
-  <meta name="description" content="JAZZ Website Developer - Learn. Create. Develop.">
-  <title>JAZZ WEBSITE DEVELOPER</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #020b24;
-      color: white;
-      line-height: 1.6;
-    }
-
-    header {
-      padding: 48px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #063b88, #020b24);
-      border-bottom: 2px solid #00d9ff;
-    }
-
-    header h1 {
-      margin: 0;
-      color: #00d9ff;
-      font-size: clamp(2.2rem, 8vw, 3.2rem);
-      letter-spacing: 6px;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px 24px;
-      padding: 16px;
-      background: #063b88;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 8px;
-    }
-
-    nav a:hover {
-      color: #00d9ff;
-    }
-
-    section {
-      padding: 48px 20px;
-      text-align: center;
-      scroll-margin-top: 20px;
-    }
-
-    h2 {
-      color: #00d9ff;
-      font-size: clamp(1.6rem, 5vw, 2.2rem);
-    }
-
-    .hero {
-      padding: 72px 20px;
-      background: #071a3d;
-    }
-
-    .hero p {
-      max-width: 650px;
-      margin: 10px auto;
-    }
-
-    .card {
-      width: min(100%, 460px);
-      margin: 18px auto;
-      padding: 25px;
-      background: #0b2860;
-      border: 1px solid #168bff;
-      border-radius: 16px;
-      box-shadow: 0 5px 20px #0005;
-    }
-
-    .card h3 {
-      color: #00d9ff;
-    }
-
-    button {
-      background: #00aaff;
-      color: #00152e;
-      border: 0;
-      padding: 13px 24px;
-      border-radius: 25px;
-      font-weight: bold;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #00d9ff;
-    }
-
-    footer {
-      padding: 24px 16px;
-      text-align: center;
-      background: #063b88;
-      border-top: 2px solid #00d9ff;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 34px 16px;
-      }
-
-      nav {
-        flex-direction: column;
-        gap: 4px;
-      }
-
-      nav a {
-        display: block;
-        width: 100%;
-        padding: 10px;
-      }
-
-      section {
-        padding: 34px 16px;
-      }
-
-      .hero {
-        padding: 48px 16px;
-      }
-
-      .card {
-        padding: 20px 16px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        scroll-behavior: auto;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#06152f">
+<title>JAZZ | Website Developer</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#06152f;color:white;line-height:1.6}
+header{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;background:#081d3e;border-bottom:1px solid #087bce}
+.logo{color:#00cfff;font-size:28px;font-weight:bold;letter-spacing:4px}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-weight:bold}
+nav a:hover{color:#00cfff}
+.hero{text-align:center;padding:90px 20px;background:linear-gradient(135deg,#063b88,#06152f)}
+.hero h1{font-size:clamp(38px,8vw,65px);color:#00d9ff}
+.hero h2{margin:10px 0}
+.hero p{color:#d4e6ff}
+.btn{display:inline-block;margin-top:25px;padding:12px 25px;border-radius:30px;background:#00cfff;color:#06152f;text-decoration:none;font-weight:bold}
+section{padding:60px 8%;text-align:center}
+section h2{color:#00d9ff;font-size:30px;margin-bottom:25px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1000px;margin:auto}
+.card{background:#0d2852;padding:28px 20px;border:1px solid #087bce;border-radius:16px}
+.card h3{color:#00d9ff;margin-bottom:12px}
+.card p{color:#d4e6ff}
+.contact{background:#081d3e}
+footer{text-align:center;padding:25px;background:#041027;color:#b9d8f5}
+@media(max-width:650px){
+header{flex-direction:column;gap:15px}
+nav{justify-content:center;gap:12px}
+section{padding:45px 18px}
+.hero{padding:65px 18px}
+}
+</style>
 </head>
-
 <body>
-  <header>
-    <h1>JAZZ</h1>
-    <p><strong>WEBSITE DEVELOPER</strong></p>
-    <p>Learn. Create. Develop.</p>
-  </header>
-
-  <nav aria-label="Main navigation">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <main>
-    <section class="hero" id="home">
-      <h2>Welcome to JAZZ</h2>
-      <p>Welcome to my website!</p>
-      <p>Explore technology and learn website development.</p>
-    </section>
-
-    <section id="about">
-      <h2>About JAZZ</h2>
-      <div class="card">
-        <h3>Who We Are</h3>
-        <p>JAZZ is a website development learning project.</p>
-        <p>Learn, create and develop amazing websites.</p>
-      </div>
-    </section>
-
-    <section id="services">
-      <h2>My Services</h2>
-      <div class="card">
-        <h3>HTML</h3>
-        <p>Learn website structure.</p>
-      </div>
-      <div class="card">
-        <h3>CSS</h3>
-        <p>Create beautiful website designs.</p>
-      </div>
-      <div class="card">
-        <h3>JavaScript</h3>
-        <p>Make websites interactive.</p>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact JAZZ</h2>
-      <div class="card">
-        <p>Thank you for visiting my website!</p>
-        <button type="button" onclick="alert('Welcome to JAZZ!')">
-          Say Hello
-        </button>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>Created by JAZZ | 2026</p>
-    <p>Learn. Create. Develop.</p>
-  </footer>
+<header>
+<div class="logo">JAZZ</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#security">Security</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+<main>
+<section class="hero" id="home">
+<h1>WELCOME TO JAZZ</h1>
+<h2>WEBSITE DEVELOPER</h2>
+<p>Learn. Create. Develop.</p>
+<p>Explore technology, website development and digital security.</p>
+<a href="#services" class="btn">Explore More</a>
+</section>
+<section id="about">
+<h2>About JAZZ</h2>
+<div class="card">
+<h3>Who We Are</h3>
+<p>JAZZ is a technology learning project focused on website development and digital knowledge.</p>
+</div>
+</section>
+<section id="services">
+<h2>My Services</h2>
+<div class="cards">
+<div class="card"><h3>HTML</h3><p>Learn website structure.</p></div>
+<div class="card"><h3>CSS</h3><p>Create beautiful responsive designs.</p></div>
+<div class="card"><h3>JavaScript</h3><p>Make websites interactive.</p></div>
+</div>
+</section>
+<section id="security">
+<h2>Cyber Security</h2>
+<div class="cards">
+<div class="card"><h3>Online Safety</h3><p>Protect your personal information online.</p></div>
+<div class="card"><h3>Digital Awareness</h3><p>Understand online risks and stay safe.</p></div>
+<div class="card"><h3>Security Basics</h3><p>Learn about passwords, privacy and safe browsing.</p></div>
+</div>
+</section>
+<section class="contact" id="contact">
+<h2>Contact JAZZ</h2>
+<p>Thank you for visiting my website!</p>
+<a href="#home" class="btn">Back to Home</a>
+</section>
+</main>
+<footer>
+<p>Created by JAZZ | 2026</p>
+<p>Learn. Create. Develop.</p>
+</footer>
 </body>
 </html>
