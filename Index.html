@@ -209,8 +209,49 @@ body.light .hero a {
 body.light .hero .btn-primary {
   color: #ffffff;
 
-}</style>
-</heade
+}</style>/* LIGHT MODE */
+body.light {
+  background: #f0f6ff;
+  color: #07152f;
+}
+
+body.light header,
+body.light .contact {
+  background: #ffffff;
+}
+
+body.light nav a {
+  color: #07152f;
+}
+
+body.light .hero {
+  background: linear-gradient(135deg, #ffffff, #cce5ff);
+}
+
+body.light .hero p,
+body.light .about-text,
+body.light .contact p {
+  color: #07152f;
+}
+
+body.light section {
+  background-color: #f0f6ff;
+}
+
+body.light .card {
+  background: #ffffff;
+  color: #07152f;
+}
+
+body.light .card p {
+  color: #33445f;
+}
+
+body.light footer {
+  background: #dceaff;
+  color: #07152f;
+}
+</head>
 
 <body>
 
@@ -249,7 +290,9 @@ body.light .hero .btn-primary {
 <section id="services">
   <h2>My Services</h2>
 
-  <div class="cards">
+ <button class="theme-btn" id="themeBtn">
+  Light Mode
+ </button> <div class="cards">
     <div class="card">
       <h3>HTML</h3>
       <p>Build the structure of websites.</p>
@@ -294,7 +337,15 @@ body.light .hero .btn-primary {
   <p>Learn. Create. Develop.</p>
 </footer>
 
-<script>
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+
+  themeBtn.textContent = document.body.classList.contains("light")
+    ? "Dark Mode"
+    : "Light Mode";
+});<script>
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
 
