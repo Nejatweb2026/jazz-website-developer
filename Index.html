@@ -345,7 +345,15 @@ themeBtn.addEventListener("click", () => {
   themeBtn.textContent = document.body.classList.contains("light")
     ? "Dark Mode"
     : "Light Mode";
-});<script>
+});<script>const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+
+  themeBtn.textContent = document.body.classList.contains("light")
+    ? "Dark Mode"
+    : "Light Mode";
+});
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
 
