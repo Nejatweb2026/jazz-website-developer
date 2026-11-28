@@ -41,3 +41,37 @@ body.light .contact textarea {
 body.light .security-panel h2 {
   color: #07152f;
 }
+/* JAZZ Website Animation */
+.hero .eyebrow,
+.hero h1,
+.hero h2,
+.hero p,
+.hero .actions {
+  animation: jazzFadeUp 0.8s ease both;
+}
+
+.hero h1 { animation-delay: 0.12s; }
+.hero h2 { animation-delay: 0.22s; }
+.hero p { animation-delay: 0.32s; }
+.hero .actions { animation-delay: 0.42s; }
+
+.hero-art {
+  animation: jazzFadeIn 1.1s ease both;
+}
+
+@keyframes jazzFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes jazzFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
